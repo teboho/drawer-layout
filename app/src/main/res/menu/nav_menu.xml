@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_a"
+        android:icon="@android:drawable/presence_audio_away"
+        android:title="A" />
+    <item
+        android:id="@+id/nav_b"
+        android:icon="@android:drawable/presence_audio_busy"
+        android:title="B" />
+    <item
+        android:id="@+id/nav_c"
+        android:icon="@android:drawable/presence_audio_online"
+        android:title="C" />
+    <item
+        android:id="@+id/nav_d"
+        android:icon="@android:drawable/stat_notify_sync"
+        android:title="D" />
+</menu>

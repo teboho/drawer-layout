@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LearningNavigation0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="str_a_fragment">Hello A fragment</string>
+    <string name="str_b_fragment">Hello B fragment</string>
+    <string name="str_c_fragment">Hello C fragment</string>
+    <string name="str_d_fragment">Hello D fragment</string>
+    <string name="str_e_fragment">Hello E fragment</string>
+    <string name="str_open">Open</string>
+    <string name="str_close">Close</string>
+</resources>
