@@ -6,6 +6,12 @@ import androidx.lifecycle.ViewModel;
 
 import java.util.Random;
 
+/**
+ * The view model is responsible for managing the data that is displayed in the view
+ * @see DiceRollFragment
+ * @see DiceUiState
+ * @author teboho
+ */
 public class DiceRollViewModel extends ViewModel {
     // The view model stores MutableLiveData that contains the object of the model class
     private final MutableLiveData<DiceUiState> uiState = new MutableLiveData<>(new DiceUiState(0, 0, 0));

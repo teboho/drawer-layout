@@ -20,6 +20,17 @@ import android.widget.TextView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
+/**
+ * This activity is responsible for the navigation drawer
+ * @see AFragment
+ * @see BFragment
+ * @see CFragment
+ * @see DFragment
+ * @see DiceRollFragment
+ * @see DiceRollViewModel
+ * @see DiceUiState
+ * @author teboho
+ */
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawer_layout;
     ActionBarDrawerToggle toggle;
@@ -41,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         my_toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(my_toolbar);
         getSupportActionBar().setTitle("Navigation on a DrawerLayout");
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         // Initiate the ui elements that you will
         drawer_layout = (DrawerLayout) findViewById(R.id.drawer_layout);

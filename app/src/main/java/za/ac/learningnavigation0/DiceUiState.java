@@ -1,7 +1,9 @@
 package za.ac.learningnavigation0;
 
 /**
- * Model class for Dice UI State
+ * This class is the model class that contains the data that is displayed in the view
+ * @see DiceRollViewModel
+ * @author teboho
  */
 public class DiceUiState {
     private final Integer firstDieValue;
