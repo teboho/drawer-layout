@@ -28,8 +28,8 @@ public class DiceRollFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_dice_roll, container, false);
 
-
-        mViewModel = new ViewModelProvider(this).get(DiceRollViewModel.class);
+        // The view model storage will be owned by the activity meaning that it will be alive throughout the lifecycle of the activity
+        mViewModel = new ViewModelProvider(getActivity()).get(DiceRollViewModel.class);
 
         // TODO: Use the ViewModel
         FloatingActionButton rollFAB = view.findViewById(R.id.roll_fab);
