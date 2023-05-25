@@ -10,7 +10,7 @@
         android:id="@+id/nav_b"
         android:icon="?android:attr/fingerprintAuthDrawable"
         android:iconTint="#DF0A0A"
-        android:title="B" />
+        android:title="B : Changes the Menu!" />
     <item
         android:id="@+id/nav_c"
         android:icon="@android:drawable/presence_audio_online"
@@ -21,7 +21,7 @@
         android:title="D" />
     <item
         android:id="@+id/menu_dice"
-        android:icon="@android:drawable/alert_light_frame"
+        android:icon="@drawable/casino_foreground"
         android:iconTint="#64DD17"
         android:title="Play Some Dice :)" />
 </menu>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:layout_marginTop="20dp"
-    android:background="@android:color/holo_green_dark"
+    android:background="#76D0FE"
     android:orientation="vertical">
 
     <ImageView
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:paddingTop="8dp"
-        android:text="Leo Messi"
+        android:text="Name Surname"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="user2@gmail.com"
+        android:text="email@provider.com"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.357"

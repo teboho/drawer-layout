@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     BFragment bFragment = new BFragment();
     CFragment cFragment = new CFragment();
     DFragment dFragment = new DFragment();
+    Fragment diceFragment = new DiceRollFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         toggle = new ActionBarDrawerToggle(this, drawer_layout, my_toolbar, R.string.str_open, R.string.str_close);
         toggle.syncState();
 
-        setCurrentFragment(aFragment);
+        setCurrentFragment(diceFragment);
         handleNavigationDrawer();
     }
 
@@ -117,14 +118,12 @@ public class MainActivity extends AppCompatActivity {
                 if (item.getItemId() == R.id.nav_1_d){
                     setCurrentFragment(dFragment);
                     my_toolbar.setTitle("D Fragment");
-                    my_toolbar.setTitleTextColor(getResources().getColor(com.google.android.material.R.color.m3_navigation_item_text_color, getResources().newTheme()));
                     nav_view.getMenu().clear();
                     nav_view.inflateMenu(R.menu.nav_menu);
                     drawer_layout.closeDrawers();
                     return true;
                 }
                 if (item.getItemId() == R.id.menu_dice){
-                    Fragment diceFragment = new DiceRollFragment();
                     setCurrentFragment(diceFragment);
                     my_toolbar.setTitle("How About Some Dice?");
                     drawer_layout.closeDrawers();

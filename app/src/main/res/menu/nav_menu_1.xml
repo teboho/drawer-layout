@@ -17,5 +17,5 @@
     <item
         android:id="@+id/nav_1_d"
         android:icon="@android:drawable/stat_sys_upload"
-        android:title="Menu Item D" />
+        android:title="D : This will change the Menu Back" />
 </menu>
