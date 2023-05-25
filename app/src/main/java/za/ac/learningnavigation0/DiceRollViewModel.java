@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class DiceRollViewModel extends ViewModel {
     // The view model stores MutableLiveData that contains the object of the model class
-    private final MutableLiveData<DiceUiState> uiState = new MutableLiveData<>(new DiceUiState(-1, -1, 0));
+    private final MutableLiveData<DiceUiState> uiState = new MutableLiveData<>(new DiceUiState(0, 0, 0));
 
     /**
      * This is a getter fir the MutableLiveData of the model data
@@ -30,5 +30,9 @@ public class DiceRollViewModel extends ViewModel {
                         uiState.getValue().getNumberOfRolls() + 1
                 )
         );
+    }
+
+    public void refresh() {
+        uiState.setValue(new DiceUiState(0,0,0));
     }
 }

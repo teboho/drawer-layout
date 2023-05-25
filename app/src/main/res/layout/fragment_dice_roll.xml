@@ -12,15 +12,15 @@
         android:id="@+id/dice_roll_tittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
+        android:fontFamily="@font/alata"
         android:outlineAmbientShadowColor="#FFC107"
         android:outlineSpotShadowColor="#AE891B"
         android:shadowColor="#AA8209"
         android:shadowDx="@dimen/material_emphasis_disabled"
         android:text="Roll A Dice"
-        android:textColor="#FF5722"
+        android:textColor="#0D47A1"
         android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/rollCount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +29,6 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:backgroundTint="#1A237E"
         android:divider="?attr/dividerVertical"
         android:gravity="center"
@@ -39,7 +38,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dice_roll_tittle">
+        app:layout_constraintTop_toBottomOf="@+id/rollCount">
 
         <LinearLayout
             android:id="@+id/roll1"
@@ -101,21 +100,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-smallcaps"
+                android:padding="10dp"
                 android:text="0"
                 android:textAlignment="center"
                 android:textColor="#6200EA"
                 android:textSize="48sp"
                 android:textStyle="bold"
-                android:typeface="monospace"
-                android:padding="10dp" />
+                android:typeface="monospace" />
         </LinearLayout>
     </LinearLayout>
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="left" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/roll_fab"
@@ -124,9 +117,52 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:clickable="true"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@mipmap/casino"
+        app:backgroundTint="@color/white"
         app:fabSize="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/rollCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#0D47A1"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/dice_roll_tittle" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Roll Count:"
+        android:textAllCaps="true"
+        android:textColor="#0D47A1"
+        android:textSize="34sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/rollCount"
+        app:layout_constraintEnd_toStartOf="@+id/rollCount"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rollCount" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/refresh_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:src="@drawable/baseline_refresh_24"
+        app:backgroundTint="#E8F5E9"
+        app:layout_constraintBottom_toBottomOf="@+id/roll_fab"
+        app:layout_constraintEnd_toStartOf="@+id/roll_fab"
+        app:layout_constraintTop_toTopOf="@+id/roll_fab" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

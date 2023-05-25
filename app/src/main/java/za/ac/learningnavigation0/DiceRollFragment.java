@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -33,13 +34,16 @@ public class DiceRollFragment extends Fragment {
 
         // TODO: Use the ViewModel
         FloatingActionButton rollFAB = view.findViewById(R.id.roll_fab);
+        FloatingActionButton refreshRollFAB = view.findViewById(R.id.refresh_roll);
         TextView roll1Result = (TextView)view.findViewById(R.id.roll_1_result);
         TextView roll2Result = (TextView)view.findViewById(R.id.roll_2_result);
+        TextView rollCount = view.findViewById(R.id.rollCount);
 
         // What must happen as the viewmodel stuf changes ...
         mViewModel.getUiState().observe(getViewLifecycleOwner(), diceUiState -> {
             roll1Result.setText(diceUiState.getFirstDieValue() + "");
             roll2Result.setText(diceUiState.getSecondDieValue() + "");
+            rollCount.setText(diceUiState.getNumberOfRolls()+ "");
         });
 
         // Make chages to the view model
@@ -47,15 +51,8 @@ public class DiceRollFragment extends Fragment {
             mViewModel.rollDice();
         });
 
+        refreshRollFAB.setOnClickListener(l -> mViewModel.refresh());
+
         return view;
     }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-       // mViewModel = new ViewModelProvider(this).get(DiceRollViewModel2.class);
-        // TODO: Use the ViewModel
-
-    }
-
 }
