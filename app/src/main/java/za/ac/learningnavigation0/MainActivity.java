@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.Navigation;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -67,21 +68,63 @@ public class MainActivity extends AppCompatActivity {
                 // what must happen when an item is clicked
                 if (item.getItemId() == R.id.nav_a){
                     setCurrentFragment(aFragment);
+                    my_toolbar.setTitle("A Fragment");
                     drawer_layout.closeDrawers();
                     return true;
                 }
                 if (item.getItemId() == R.id.nav_b){
                     setCurrentFragment(bFragment);
+                    my_toolbar.setTitle("B Fragment");
                     drawer_layout.closeDrawers();
+                        nav_view.getMenu().clear();
+                        nav_view.inflateMenu(R.menu.nav_menu_1);
                     return true;
                 }
                 if (item.getItemId() == R.id.nav_c){
                     setCurrentFragment(cFragment);
+                    my_toolbar.setTitle("C Fragment");
                     drawer_layout.closeDrawers();
                     return true;
                 }
                 if (item.getItemId() == R.id.nav_d){
                     setCurrentFragment(dFragment);
+                    my_toolbar.setTitle("D Fragment");
+                    drawer_layout.closeDrawers();
+                    return true;
+                }
+                // what must happen when an item is clicked
+                if (item.getItemId() == R.id.nav_1_a){
+                    setCurrentFragment(aFragment);
+                    my_toolbar.setTitle("A Fragment");
+                    drawer_layout.closeDrawers();
+                    return true;
+                }
+                if (item.getItemId() == R.id.nav_1_b){
+                    setCurrentFragment(bFragment);
+                    my_toolbar.setTitle("B Fragment");
+                    drawer_layout.closeDrawers();
+                    nav_view.getMenu().clear();
+                    return true;
+                }
+                if (item.getItemId() == R.id.nav_1_c){
+                    setCurrentFragment(cFragment);
+                    my_toolbar.setTitle("C Fragment");
+                    drawer_layout.closeDrawers();
+                    return true;
+                }
+                if (item.getItemId() == R.id.nav_1_d){
+                    setCurrentFragment(dFragment);
+                    my_toolbar.setTitle("D Fragment");
+                    my_toolbar.setTitleTextColor(getResources().getColor(com.google.android.material.R.color.m3_navigation_item_text_color, getResources().newTheme()));
+                    nav_view.getMenu().clear();
+                    nav_view.inflateMenu(R.menu.nav_menu);
+                    drawer_layout.closeDrawers();
+                    return true;
+                }
+                if (item.getItemId() == R.id.menu_dice){
+                    Fragment diceFragment = new DiceRollFragment();
+                    setCurrentFragment(diceFragment);
+                    my_toolbar.setTitle("How About Some Dice?");
                     drawer_layout.closeDrawers();
                     return true;
                 }
